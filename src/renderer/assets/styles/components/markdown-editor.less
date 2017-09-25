@@ -1,0 +1,38 @@
+@import '../constants/dimensions';
+@import '../constants/colors';
+@import '../constants/fonts';
+
+.markdown-editor {
+  border: 1px solid var(--hl-md);
+  box-sizing: border-box;
+
+  .markdown-editor__edit {
+    padding: @padding-xs @padding-sm;
+  }
+
+  &.markdown-editor--dynamic-height {
+    .CodeMirror-scroll {
+      max-height: 30vh;
+    }
+
+    .input {
+      height: auto !important;
+    }
+  }
+
+  &:not(.markdown-editor--dynamic-height) .markdown-editor__edit {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    .input {
+      height: 100%;
+    }
+  }
+
+  .markdown-editor__preview {
+    max-height: 35vh;
+    padding: @padding-sm;
+    overflow: auto;
+  }
+}

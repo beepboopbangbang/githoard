@@ -1,0 +1,47 @@
+button.window-ctrl {
+  -webkit-app-region: no-drag;
+
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+
+  color: var(--color-contrast-font);
+  background-color: transparent;
+  transition: background-color 0.25s ease;
+  text-align: center;
+
+  &:focus { outline: none; }
+
+  &:hover {
+    background-color: var(--color-hl-bg);
+    color: var(--color-hl-font);
+
+    &:active {
+      background-color: rgba(102,102,102,0.3);
+
+      transition: none;
+    }
+  }
+
+  &.close:hover {
+    background-color: #e81123;
+    color: #fff;
+
+    &:active {
+      background-color: #bf0f1d;
+
+      transition: none;
+    }
+  }
+
+  /* https://css-tricks.com/cascading-svg-fill-color/ */
+  svg { fill: currentColor; }
+}

@@ -1,0 +1,25 @@
+@import '../constants/colors';
+@import '../constants/dimensions';
+
+::-webkit-scrollbar {
+  width: @scrollbar-width;
+  height: @scrollbar-width;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @hl-md;
+  border-radius: @padding-sm;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(50,50,50,0.7);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

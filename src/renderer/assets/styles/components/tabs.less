@@ -1,0 +1,59 @@
+.tab-pane {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.tab-pane {
+    flex: 1 1;
+    .py2;
+    .px3;
+    &.is-active {
+      transform: translateZ(0);
+    }
+    &[class*="Out"] {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(0);
+      transform: translateY(0);
+    }
+  }
+
+.tabs-container,
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.tabs-container {
+    margin: auto -2rem;
+}
+.tab-content {
+    position: relative;
+    overflow: auto;
+    .m1;
+}
+
+.tabs {
+    background-color: var(--hl-xxs);
+    li button {
+        outline: 0;
+        border: 1px solid transparent;
+
+        &:focus {
+            border: 1px solid transparent;
+        }
+    }
+    .is-active button {
+        background-color: transparent;
+        background-color: var(--color-bg);
+        &:focus {
+            background-color: var(--color-bg);
+        }
+    }
+}
