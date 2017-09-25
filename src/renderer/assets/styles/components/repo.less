@@ -1,0 +1,129 @@
+.com-repo {
+  border-bottom: 1px solid var(--hl-xs);
+  position: relative;
+  box-sizing: border-box;
+
+  header {
+    .px3;
+    .icon {
+      font-size: 1.5em;
+    }
+    .com-repo-link {
+      color: var(--color-font);
+      .text-decoration-none;
+
+      &:hover,
+      &:hover .icon {
+        color: var(--hl);
+      }
+    }
+    .com-repo-title {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      overflow: hidden;
+      line-height: 1.5;
+    }
+  }
+  .com-repo-body {
+    .px3;
+  }
+  .com-repo-folder {
+    font-size: 0.9em;
+    color: var(--hl-xl);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+
+    &:hover,
+    &:hover .icon {
+      color: var(--hl);
+    }
+  }
+}
+.progress-objects-container,
+.progress-deltas-container {
+  background: var(--color-success);
+  position: absolute;
+  top: 0;
+  height: 2px;
+  transition: width 0.5s ease-out, opacity 0.5s ease-out 1.2s;
+
+  &.done {
+    opacity: 0;
+  }
+}
+.progress-objects-container {
+  background: var(--color-info);
+  left: 0;
+}
+.progress-deltas-container {
+  transition: width 0.5s ease-out, opacity 0.3s ease-out 1.5s;
+  background: var(--color-notice);
+  right: 0;
+  opacity: 0.7;
+}
+a {
+  cursor: pointer;
+}
+.btn {
+  background: none;
+  border-radius: 0;
+
+  &:hover {
+    background-color: var(--hl-xs);
+  }
+  &:focus {
+    border: 0;
+    box-shadow: none;
+  }
+}
+.path-git,
+.fa-git,
+.gh-git {
+  fill: #F05133;
+  color: #F05133;
+}
+.path-github,
+.fa-github,
+.gh-github {
+  fill: var(--color-font);
+  color: var(--color-font);
+}
+.path-bitbucket,
+.fa-bitbucket,
+.gh-bitbucket {
+  fill: #0747A6;
+  color: #0747A6;
+}
+.path-gitlab,
+.fa-gitlab,
+.gh-gitlab {
+  fill: #fca326;
+  color: #fca326;
+}
+
+.center {
+  text-align: center;
+}
+
+#repos {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .repositories {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .loading {
+      position: absolute;
+      width: 100%;
+      height: 10px;
+    }
+  }
+}
