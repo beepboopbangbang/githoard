@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "githoard",
+  "productName": "GitHoard",
+  "longName": "GitHoard Client",
+  "description": "Hoard git repositories with ease",
+  "homepage": "https://jojobyte.github.com/githoard/",
+  "author": {
+    "name": "Jordan Hess",
+    "email": "dev@beepboopbangbang.com",
+    "url": "https://jojobyte.github.com/githoard/"
+  },
+  "main": "main.js"
+}

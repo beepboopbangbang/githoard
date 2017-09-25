@@ -1,0 +1,85 @@
+/* Fonts */
+@font-size: 13px;
+@font-size-xxs: round(@font-size * 0.6);
+@font-size-xs: round(@font-size * 0.8);
+@font-size-sm: round(@font-size * 0.9);
+@font-size-md: round(@font-size * 1.0);
+@font-size-lg: round(@font-size * 1.2);
+@font-size-xl: round(@font-size * 1.35);
+@font-size-xxl: round(@font-size * 1.5);
+@font-size-xxxl: round(@font-size * 1.7);
+
+/* Padding */
+@padding-md: round(@font-size * 1.2);
+@padding-sm: round(@font-size * 0.6);
+@padding-xs: round(@font-size * 0.4);
+@padding-xxs: round(@font-size * 0.2);
+@padding-lg: round(@font-size * 2.5);
+@padding-xl: round(@font-size * 5);
+
+
+/* Wrapper */
+@line-height-md: round(@font-size * 3.6);
+@line-height-sm: round(@line-height-md * 0.8);
+@line-height-xs: round(@line-height-sm * 0.85);
+@line-height-xxs: round(@line-height-xs * 0.85);
+
+/* Nav */
+@height-nav: @line-height-md;
+
+/* Scrollbars */
+@scrollbar-width: round(@font-size * 0.75);
+
+/* Borders */
+@radius-sm: round(@font-size * 0.2);
+@radius-md: round(@font-size * 0.3);
+
+/* Dropdowns */
+@dropdown-min-width: round(@font-size * 12);
+
+/* Modals */
+@modal-width: round(@font-size * 50);
+@modal-width-wide: round(@font-size * 70);
+
+/* Other */
+@drag-width: round(@font-size * 0.5);
+
+/* Breakpoints */
+@breakpoint-lg: 1100px;
+@breakpoint-md: 880px;
+@breakpoint-sm: 660px;
+
+body {
+  --win32-title-bar-height: 28px;
+
+  /** The height of the title bar area on darwin platforms */
+  --darwin-title-bar-height: 22px;
+}
+
+.txt-xxs {
+  font-size: @font-size-xxs !important;
+}
+
+.txt-xs {
+  font-size: @font-size-xs !important;
+}
+
+.txt-sm {
+  font-size: @font-size-sm !important;
+}
+
+.txt-md {
+  font-size: @font-size-md !important;
+}
+
+.txt-lg {
+  font-size: @font-size-lg !important;
+}
+
+.txt-xl {
+  font-size: @font-size-xl !important;
+}
+
+.txt-xxl {
+  font-size: @font-size-xxl !important;
+}
