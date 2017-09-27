@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/jojobyte/githoard/compare/v0.3.0...v0.3.1) (2017-09-27)
+
+
+### Bug Fixes
+
+* **events:** Fix eslint error in events ([a8d03c1](https://github.com/jojobyte/githoard/commit/a8d03c1))
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2017-09-24)
 
