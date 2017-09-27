@@ -10,13 +10,18 @@ GitHoard
 Hoard git repositories with ease
 </p>
 
+<p align="center">
+
+[![Build Status](https://travis-ci.org/jojobyte/githoard.svg?branch=master)](https://travis-ci.org/jojobyte/githoard)
+</p>
+
 ## Overview
 
 The goal of GitHoard is to trivialize cloning repositories for future offline review.
 
 Often, the process of copy & pasting a repository to the command line breaks focus and flow, and other Git GUI's perpetuate this problem by requiring the selecting of a directory before starting the clone process.
 
-GitHoard solves this by overriding the HTTP protocols associated with GitHub (github-mac:// and github-win://) and Sourcetree (sourcetree://) the automatically cloning when a link using that protocol is clicked.
+GitHoard solves this by overriding the HTTP protocols associated with GitHub (github-mac:// and github-win://) and Sourcetree (sourcetree://) then automatically cloning when a link using that protocol is clicked.
 
 ## Download
 Download the latest version from the [releases](https://github.com/jojobyte/githoard/releases) page.
