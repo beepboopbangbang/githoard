@@ -246,7 +246,7 @@ export class Events {
           parsedQuery = {};
         }
       }
-      const { offsets, exclude, ...pq } = parsedQuery;
+      const { offsets, exclude, ...pq } = parsedQuery; // eslint-disable-line
       this.utilsDb
         .get(toMongo(pq))
         .then((docs) => {
