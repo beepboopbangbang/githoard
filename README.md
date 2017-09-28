@@ -24,7 +24,7 @@ Often, the process of copy & pasting a repository to the command line breaks foc
 GitHoard solves this by overriding the HTTP protocols associated with GitHub (github-mac:// and github-win://) and Sourcetree (sourcetree://) then automatically cloning when a link using that protocol is clicked.
 
 ## Download
-Download the latest version from the [releases](https://github.com/jojobyte/githoard/releases) page.
+Download the latest version from the [releases](https://github.com/jojobyte/githoard/releases/latest) page.
 
 ## Demo
 ![](/screens/demo.gif)
