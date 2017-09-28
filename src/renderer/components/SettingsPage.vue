@@ -102,13 +102,13 @@
           </div>
           <h1 class="about-githoard center h1 mb1">GitHoard</h1>
           <p class="center mt0 mb1">Version: {{currentVersion}}</p>
-          <div class="form-control form-control--padded">
-            <button class="btn btn--clicky mx-auto">Check for Update</button>
-            <label class="label" for="theme-selector">Updates</label>
+          <div class="form-control form-control--padded mt3">
+            <button @click.stop.prevent="checkForUpdate" class="btn btn--clicky mx-auto">Check for Update</button>
+            <!-- <label class="label" for="theme-selector">Updates</label>
             <label class="inline checkbox">
               <input type="checkbox" class="" name="app_update" />
               Check for updates automatically
-            </label>
+            </label> -->
           </div>
         </fieldset>
       </tab-pane>
@@ -155,6 +155,9 @@ export default {
     };
   },
   computed: {
+    updateLink () {
+      return `https://github.com/${pkg.repository}/releases/latest`;
+    },
     currentVersion () {
       const flag = process.env.NODE_ENV === 'development' ? '-dev' : '';
       const channel = pkg.channel ? `-${pkg.channel}` : '';
@@ -252,6 +255,9 @@ export default {
     this.$electron.ipcRenderer.removeAllListeners(`selected-folder`);
   },
   methods: {
+    checkForUpdate () {
+      this.$electron.ipcRenderer.send('open-url', this.updateLink);
+    },
     onFileSelect (val, event) {
       this.$electron.ipcRenderer.send('select-dir');
     }
