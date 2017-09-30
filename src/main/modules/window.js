@@ -1,13 +1,25 @@
 'use strict';
 
 import { BrowserWindow, Menu } from 'electron';
+import path from 'path';
 import windowStateKeeper from 'electron-window-state';
 import Positioner from 'electron-positioner';
 import GitUniversal from '../../universal/git';
 
 export class WindowUtils {
   constructor (options = {}) {
-    const opt = {};
+    const opt = {
+      iconName: 'icon.png',
+      // iconPressedName: 'iconPressed.png',
+      iconPath: '',
+      window: null
+    };
+
+    if (process.platform === 'darwin') {
+      opt.iconName = 'iconTemplate.png';
+    }
+
+    opt.iconPath = path.join(__static, 'icons');
 
     this.options = Object.assign({}, opt, options);
     this.winURL = process.env.NODE_ENV === 'development'
@@ -32,7 +44,9 @@ export class WindowUtils {
       'minWidth': 440,
       'minHeight': 580,
       backgroundColor: '#232421',
-      show: false
+      show: false,
+      // icon: __dirname + '/app/assets/img/icon.png',
+      icon: path.join(this.options.iconPath, this.options.iconName),
     };
 
     if (process.platform === 'darwin') {

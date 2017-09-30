@@ -19,7 +19,7 @@
         </fieldset>
       </tab-pane>
       <tab-pane label="Window">
-        <fieldset v-if="!isWin32">
+        <fieldset v-if="isDarwin">
           <h2>Dock</h2>
           <div class="form-control form-control--padded">
             <label class="inline checkbox">
