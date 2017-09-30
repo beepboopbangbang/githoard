@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.4"></a>
+## [0.3.4](https://github.com/jojobyte/githoard/compare/v0.3.3...v0.3.4) (2017-09-30)
+
+
+### Bug Fixes
+
+* **icon:** Fix linux error and icon issues ([2abd3d7](https://github.com/jojobyte/githoard/commit/2abd3d7)), closes [#1](https://github.com/jojobyte/githoard/issues/1)
+
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://github.com/jojobyte/githoard/compare/v0.3.2...v0.3.3) (2017-09-28)
 
