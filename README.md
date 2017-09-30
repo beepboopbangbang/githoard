@@ -63,3 +63,5 @@ npm run lint
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright &copy; 2016-present, Jordan
+
+GitHoard logo designed by Jordan and makes use of Git Logo by Jason Long which is licensed under the Creative Commons Attribution 3.0 Unported License. See https://git-scm.com/downloads/logos
