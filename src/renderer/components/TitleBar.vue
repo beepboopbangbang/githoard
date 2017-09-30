@@ -24,7 +24,7 @@
       <span class="window-ctrl" v-if="$route.name !== 'repo-page'">{{$route.meta.title}}</span>
     </div>
 
-    <div class="window-controls" v-if="isWin32">
+    <div class="window-controls" v-if="!isDarwin">
         <window-controls
           v-if="window.isMinimizable()"
           name="minimize"

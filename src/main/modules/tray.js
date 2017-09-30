@@ -17,13 +17,13 @@ export class TrayUtils {
 
     if (process.platform === 'darwin') {
       opt.iconName = 'iconTemplate.png';
-    } else if (process.platform === 'win32') {
-      opt.iconName = 'icon.png';
     }
 
     opt.iconPath = path.join(__static, 'icons');
 
     this.options = Object.assign({}, opt, options);
+    
+    console.log('plat', process.platform, path.join(this.options.iconPath, this.options.iconName)); // eslint-disable-line
 
     this._window = this.options.window;
 
@@ -52,7 +52,7 @@ export class TrayUtils {
     ]);
     this.appIcon.setToolTip(this.options.trayName);
 
-    if (process.platform === 'win32') {
+    if (process.platform !== 'darwin') {
       this.appIcon.setContextMenu(contextMenu);
     }
 
