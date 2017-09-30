@@ -180,7 +180,7 @@ export class Events {
   }
 
   toggleDock (vis) {
-    if (process.platform === 'win32') {
+    if (process.platform !== 'darwin') {
       return;
     }
     if (!vis) {
