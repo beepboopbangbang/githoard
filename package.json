@@ -74,6 +74,10 @@
         }
       ]
     },
+    "nsis": {
+      "artifactName": "${name}-${version}.${ext}",
+      "perMachine": false
+    },
     "linux": {
       "icon": "static/icons",
       "executableName": "githoard",
@@ -100,6 +104,7 @@
       ]
     },
     "deb": {
+      "artifactName": "${name}-${version}-${arch}.${ext}",
       "depends": [
         "gconf2",
         "gconf-service",
