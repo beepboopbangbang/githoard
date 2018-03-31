@@ -93,10 +93,13 @@ export default {
       );
     },
     ownerUrl: function () {
+      if(this.repo.url.indexOf('gist.github') > -1) {
+        return '';
+      }
       return this.repo.url.split(`${this.repo.slug}`)[0] + this.repo.owner;
     },
     repoUrl: function () {
-      return this.repo.url.split('.git')[0];
+      return this.repo.url.substr(0, this.repo.url.length - 4);
     },
     sourceClassPath: function () {
       if (!this.repo.source) {
@@ -153,10 +156,12 @@ export default {
       this.$electron.ipcRenderer.send('open-readme', opts.folder);
     },
     openDir (opts) {
-      this.$electron.ipcRenderer.send('open-folder', opts.folder);
+      this.$electron.ipcRenderer.send('open-folder', opts);
     },
     openUrl (opts) {
-      this.$electron.ipcRenderer.send('open-url', opts);
+      if (opts !== '') {
+        this.$electron.ipcRenderer.send('open-url', opts);
+      }
     }
   }
 };

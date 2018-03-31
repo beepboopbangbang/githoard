@@ -60,6 +60,7 @@ export class DbUtils {
     return await this.db
       .cfind(findQuery)
       .sort(sortOptions)
+      // .limit(100)
       .exec();
   }
 }
