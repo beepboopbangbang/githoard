@@ -29,7 +29,7 @@ export function initSettings() {
   if (!store.has('repo')) {
     store.set('repo', {
       openDir: true,
-      fixDirs: true,
+      fixDirs: false,
     });
   }
 
