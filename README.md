@@ -13,6 +13,7 @@ Hoard git repositories with ease
 <p align="center">
 
 [![Build Status](https://travis-ci.org/jojobyte/githoard.svg?branch=master)](https://travis-ci.org/jojobyte/githoard)
+[![Build status](https://ci.appveyor.com/api/projects/status/90296t6a0qeulhb8?svg=true)](https://ci.appveyor.com/project/jojobyte/githoard)
 </p>
 
 ## Overview
