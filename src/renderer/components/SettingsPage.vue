@@ -16,6 +16,16 @@
             <input type="text" class="input file-input" id="clone_dir_txt" name="clone_dir_txt" placeholder="Select a directory" v-model="selectedDir" readonly @click.stop.prevent="onFileSelect($event.target, $event)" />
             <button class="btn btn--super-compact" @click.stop.prevent="onFileSelect($event.target, $event)"><i class="gh gh-folder-open" aria-hidden="true"></i></button>
           </div>
+          <h2>On Load</h2>
+          <div class="form-control form-control--padded">
+            <label class="inline checkbox">
+              <input type="checkbox" class="" name="auto_fix_dirs" v-model="autoFixDirs" />
+              <p class="">
+                <strong class="h3 bold">Automatically fix directory locations</strong><br/>
+                <span class="h4 italic gray">Useful after changing clone directory</span>
+              </p>
+            </label>
+          </div>
         </fieldset>
       </tab-pane>
       <tab-pane label="Window">
@@ -217,6 +227,14 @@ export default {
       },
       set (value) {
         this.$store.commit('setStore', { key: 'repo.openDir', value });
+      }
+    },
+    autoFixDirs: {
+      get () {
+        return this.$store.state.Settings.config.repo.fixDirs;
+      },
+      set (value) {
+        this.$store.commit('setStore', { key: 'repo.fixDirs', value });
       }
     },
     pillage: {
