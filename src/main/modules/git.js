@@ -269,11 +269,16 @@ export class GitUtils {
     const cmdArgs = this.gituni.parseUrl(url);
     if (!opt.cwd) opt.cwd = this.options.baseCloneDir || (remote.process || process).cwd();
 
+    let tmpOwner = cmdArgs.repoObj.owner;
+    if (tmpOwner === '' && cmdArgs.originalUrl.indexOf('gist.github.com') > -1) {
+      tmpOwner = 'gist';
+    }
+
     if (this.window) {
       this.window.focus();
     }
 
-    const cloneDir = path.join(opt.cwd, cmdArgs.repoObj.owner, cmdArgs.repoObj.name);
+    const cloneDir = path.join(opt.cwd, tmpOwner, cmdArgs.repoObj.name);
 
     this.webcon.send('log', 'clone start', cmdArgs);
     this.webcon.send('log', 'clone to dir', cloneDir);
@@ -281,10 +286,9 @@ export class GitUtils {
     if (!fs.existsSync(cloneDir)) {
       mkdirp(path.join(cloneDir, '..'));
     }
-
     const repoObj = {
-      slug: cmdArgs.repoObj.owner + '/' + cmdArgs.repoObj.name,
-      owner: cmdArgs.repoObj.owner,
+      slug: tmpOwner + '/' + cmdArgs.repoObj.name,
+      owner: tmpOwner,
       name: cmdArgs.repoObj.name,
       source: cmdArgs.repoObj.source,
       url: cmdArgs.repoUrl,
