@@ -7,6 +7,7 @@ import {
   globalShortcut,
 } from 'electron';
 import path from 'path';
+import fs from 'fs';
 import rimraf from 'rimraf';
 import queue from 'async/queue';
 import Store from 'electron-store';
@@ -35,6 +36,7 @@ export class Events {
     this.shouldQuit = false;
     this.appIcon = null;
     this.fetchQ = null;
+    this.fixQ = null;
 
 
     this.utilsGit = utilsGitLib({
@@ -70,6 +72,10 @@ export class Events {
   init () {
     this.initIpc();
     this.initApp();
+
+    if (this.store.get('repo.fixDirs')) {
+      this.fixDirectories();
+    }
   }
 
   initApp () {
@@ -81,6 +87,7 @@ export class Events {
 
   initIpc () {
     this.fetchQ = this.fetchQueue();
+    this.fixQ = this.fixQueue();
     this.ipcVueLog();
     this.ipcStore();
     this.ipcStoreGet();
@@ -168,6 +175,46 @@ export class Events {
     };
 
     return q;
+  }
+
+  fixQueue () {
+    const q = queue(({ opts }, callback) => {
+      fs.stat(opts.folder, (err, stat) => {
+        const currentBaseDir = opts.folder.split(path.sep + opts.owner)[0];
+        const compareBaseDir = global.baseCloneDir === currentBaseDir;
+        if(err != null && !compareBaseDir) {
+          // console.warn('folder does not exist', opts.folder);
+          const directory = path.join(global.baseCloneDir, opts.owner, opts.name);
+          fs.stat(directory, (err2, stat2) => {
+            if(err2 == null) {
+              // console.warn('folder exists, updating db entry', directory);
+              this.utilsDb.updateById(opts._id, {
+                folder: directory,
+              }, 'updatedAt');
+              opts.folder = directory;
+            }
+            callback();
+          });
+        } else {
+          callback();
+        }
+      });
+    }, this.options.queueConcurrency);
+
+    q.drain = () => {
+    };
+
+    return q;
+  }
+
+  fixDirectories () {
+    // console.warn('fixDirectories init');
+    this.utilsDb.get().then((docs) => {
+      // console.warn('fixDirectories', docs);
+      docs.forEach((opts) => {
+        this.fixQ.push({ opts }, (err) => {});
+      });
+    });
   }
 
   toggleTray (vis) {
@@ -346,9 +393,13 @@ export class Events {
           event.sender.send('git-current-branch', output);
         }
         if (cmd === 'clone') {
+          let tmpOwner = cmdArgs.repoObj.owner;
+          if (tmpOwner === '' && cmdArgs.originalUrl.indexOf('gist.github.com') > -1) {
+            tmpOwner = 'gist';
+          }
           const repoObj = {
-            slug: cmdArgs.repoObj.owner + '/' + cmdArgs.repoObj.name,
-            owner: cmdArgs.repoObj.owner,
+            slug: tmpOwner + '/' + cmdArgs.repoObj.name,
+            owner: tmpOwner,
             name: cmdArgs.repoObj.name,
             source: cmdArgs.repoObj.source,
             url: cmdArgs.repoUrl,
@@ -374,9 +425,31 @@ export class Events {
   }
 
   ipcOpenFolder () {
-    ipcMain.on('open-folder', (event, folder) => {
-      const opened = shell.openItem(folder);
-      event.sender.send('log', 'open-folder', [folder, opened]);
+    ipcMain.on('open-folder', (event, opts) => {
+      fs.stat(opts.folder, (err, stat) => {
+        const currentBaseDir = opts.folder.split(path.sep + opts.owner)[0];
+        const compareBaseDir = global.baseCloneDir === currentBaseDir;
+        if(err == null) {
+          // console.warn('folder exists');
+          const opened = shell.openItem(opts.folder);
+          event.sender.send('log', 'open-folder', [opts.folder, opened]);
+        } else if(!compareBaseDir) {
+          const directory = path.join(global.baseCloneDir, opts.owner, opts.name);
+          // console.warn('folder does not exist');
+          fs.stat(directory, (err, stat) => {
+            if(err == null) {
+              // console.warn('folder exists, updating db entry');
+              this.utilsDb.updateById(opts._id, {
+                folder: directory,
+              }, 'updatedAt');
+              opts.folder = directory;
+              const opened = shell.openItem(opts.folder);
+              event.sender.send('log', 'open-folder', [opts.folder, opened]);
+            }
+            // console.warn('compare folders', global.baseCloneDir, currentBaseDir, compareBaseDir);
+          });
+        }
+      });
     });
   }
 
