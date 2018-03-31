@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.5"></a>
+## [0.3.5](https://github.com/jojobyte/githoard/compare/v0.3.4...v0.3.5) (2018-03-31)
+
+
+
 <a name="0.3.4"></a>
 ## [0.3.4](https://github.com/jojobyte/githoard/compare/v0.3.3...v0.3.4) (2017-09-30)
 
