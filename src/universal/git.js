@@ -5,7 +5,7 @@ import gup from 'git-url-parse';
 
 export class GitUniversal {
   constructor () {
-    this.regexTest = /^((git|ssh|http(s)?)|(git@[\w\.]+))(:(\/\/)?)([\w\.@\:/\-~]+)(\.git)(\/)?$/i;
+    this.regexTest = /^((git|ssh|http(s)?)|(git@[\w.]+))(:(\/\/)?)([\w.@:/\-~]+)(\.git)(\/)?$/i;
   }
 
   get gitUrlRegexTest () {
