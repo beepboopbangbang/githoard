@@ -12,7 +12,7 @@ import path from 'path';
 import fs from 'fs';
 import mkdirp from 'mkdirp';
 import byline from 'byline';
-import GitHubApi from 'github';
+import GitHubApi from '@octokit/rest';
 import Store from 'electron-store';
 
 import GitUniversal from '../../universal/git';
@@ -26,9 +26,7 @@ const git = GitProcess.exec;
 
 const github = new GitHubApi({
   debug: true,
-  protocol: 'https',
-  host: 'api.github.com',
-  pathPrefix: '',
+  baseUrl: 'https://api.github.com',
   headers: {
     'user-agent': 'GH'
   },
@@ -74,7 +72,7 @@ export class GitUtils {
   }
 
   tryParse (str) {
-    const value = /(\d+)\%/.exec(str);
+    const value = /(\d+)%/.exec(str);
     if (value) {
       const percentValue = value[1];
       const percent = parseInt(percentValue, 10);
