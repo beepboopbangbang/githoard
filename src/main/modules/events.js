@@ -426,12 +426,12 @@ export class Events {
 
   ipcOpenFolder () {
     ipcMain.on('open-folder', (event, opts) => {
-      fs.stat(opts, (err, stat) => {
-        const currentBaseDir = opts.split(path.sep + opts.owner)[0];
+      fs.stat(opts.folder, (err, stat) => {
+        const currentBaseDir = opts.folder.split(path.sep + opts.owner)[0];
         const compareBaseDir = global.baseCloneDir === currentBaseDir;
         if(err == null) {
           // console.warn('folder exists');
-          const opened = shell.openItem(opts);
+          const opened = shell.openItem(opts.folder);
           event.sender.send('log', 'open-folder', [opts, opened]);
         } else if(!compareBaseDir) {
           const directory = path.join(global.baseCloneDir, opts.owner, opts.name);
@@ -443,7 +443,7 @@ export class Events {
                 folder: directory,
               }, 'updatedAt');
               opts = directory;
-              const opened = shell.openItem(opts);
+              const opened = shell.openItem(opts.folder);
               event.sender.send('log', 'open-folder', [opts, opened]);
             }
             // console.warn('compare folders', global.baseCloneDir, currentBaseDir, compareBaseDir);
