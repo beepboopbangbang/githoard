@@ -4,11 +4,11 @@
   "productName": "GitHoard",
   "version": "0.3.7",
   "author": {
-    "name": "Jordan Hess",
+    "name": "Jordan",
     "email": "184880+jojobyte@users.noreply.github.com",
-    "url": "https://jojobyte.github.com/githoard/"
+    "url": "https://jojo.io/githoard/"
   },
-  "repository": "jojobyte/githoard",
+  "repository": "beepboopbangbang/githoard",
   "description": "Hoard git repositories with ease",
   "license": "MIT",
   "main": "./dist/electron/main.js",
@@ -32,7 +32,7 @@
   },
   "build": {
     "productName": "GitHoard",
-    "appId": "com.jojobyte.githoard",
+    "appId": "com.beepboopbangbang.githoard",
     "protocols": [
       {
         "name": "GitHoard",
@@ -42,7 +42,7 @@
         ]
       },
       {
-        "name": "com.jojobyte.githoard",
+        "name": "com.beepboopbangbang.githoard",
         "schemes": [
           "github-windows",
           "github-mac",

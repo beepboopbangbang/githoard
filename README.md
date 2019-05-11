@@ -12,7 +12,7 @@ Hoard git repositories with ease
 
 <p align="center">
 
-[![Build Status](https://travis-ci.org/jojobyte/githoard.svg?branch=master)](https://travis-ci.org/jojobyte/githoard)
+[![Build Status](https://travis-ci.org/beepboopbangbang/githoard.svg?branch=master)](https://travis-ci.org/beepboopbangbang/githoard)
 [![Build status](https://ci.appveyor.com/api/projects/status/90296t6a0qeulhb8?svg=true)](https://ci.appveyor.com/project/jojobyte/githoard)
 </p>
 
@@ -25,7 +25,7 @@ Often, the process of copy & pasting a repository to the command line breaks foc
 GitHoard solves this by overriding the HTTP protocols associated with GitHub (github-mac:// and github-win://) and Sourcetree (sourcetree://) then automatically cloning when a link using that protocol is clicked.
 
 ## Download
-Download the latest version from the [releases](https://github.com/jojobyte/githoard/releases/latest) page.
+Download the latest version from the [releases](https://github.com/beepboopbangbang/githoard/releases/latest) page.
 
 ## Demo
 ![](/screens/demo.gif)
