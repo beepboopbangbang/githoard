@@ -1,0 +1,57 @@
+@import '../constants/dimensions';
+
+.com-settings {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: auto;
+
+  .px3;
+
+  .about-githoard {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  input, textarea, select, button, label, a {
+    -webkit-app-region: no-drag;
+  }
+
+  fieldset {
+    h1, h2, h3, h4, h5, h6 {
+      text-align: left;
+    }
+  }
+
+  label.label,
+  label.inline {
+    line-height: 3em;
+    padding-top: 0;
+    text-align: left;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      height: 3em;
+      margin-top: 0;
+    }
+  }
+
+  .file-selector {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-self: stretch;
+    border-bottom: 1px solid var(--hl-md);
+
+    input.file-input {
+      cursor: pointer;
+      .mb0;
+    }
+
+    button {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
