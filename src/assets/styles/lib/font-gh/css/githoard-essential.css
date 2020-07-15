@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'githoard-essential';
+  src: url('../font/githoard-essential.eot?34192739');
+  src: url('../font/githoard-essential.eot?34192739#iefix') format('embedded-opentype'),
+       url('../font/githoard-essential.woff2?34192739') format('woff2'),
+       url('../font/githoard-essential.woff?34192739') format('woff'),
+       url('../font/githoard-essential.ttf?34192739') format('truetype'),
+       url('../font/githoard-essential.svg?34192739#githoard-essential') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'githoard-essential';
+    src: url('../font/githoard-essential.svg?34192739#githoard-essential') format('svg');
+  }
+}
+*/
+ 
+ [class^="gh-"]:before, [class*=" gh-"]:before {
+  font-family: "githoard-essential";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.gh-folder:before { content: '\e800'; } /* '' */
+.gh-folder-open:before { content: '\e801'; } /* '' */
+.gh-left-big:before { content: '\e802'; } /* '' */
+.gh-right-big:before { content: '\e803'; } /* '' */
+.gh-left-open-mini:before { content: '\e804'; } /* '' */
+.gh-right-open-mini:before { content: '\e805'; } /* '' */
+.gh-left-open-big:before { content: '\e806'; } /* '' */
+.gh-right-open-big:before { content: '\e807'; } /* '' */
+.gh-left-fat:before { content: '\e808'; } /* '' */
+.gh-right-fat:before { content: '\e809'; } /* '' */
+.gh-level-up:before { content: '\e80a'; } /* '' */
+.gh-help-circled:before { content: '\e80b'; } /* '' */
+.gh-info-circled:before { content: '\e80c'; } /* '' */
+.gh-qrcode:before { content: '\e80d'; } /* '' */
+.gh-upload:before { content: '\e80e'; } /* '' */
+.gh-download:before { content: '\e80f'; } /* '' */
+.gh-git:before { content: '\e810'; } /* '' */
+.gh-book-open:before { content: '\e811'; } /* '' */
+.gh-up-open:before { content: '\e812'; } /* '' */
+.gh-down-open:before { content: '\e813'; } /* '' */
+.gh-up-dir:before { content: '\e814'; } /* '' */
+.gh-down-dir:before { content: '\e815'; } /* '' */
+.gh-wrench:before { content: '\e816'; } /* '' */
+.gh-cog:before { content: '\e817'; } /* '' */
+.gh-up-circled2:before { content: '\e818'; } /* '' */
+.gh-down-circled2:before { content: '\e819'; } /* '' */
+.gh-up-big:before { content: '\e81a'; } /* '' */
+.gh-left-dir:before { content: '\e81b'; } /* '' */
+.gh-right-dir:before { content: '\e81c'; } /* '' */
+.gh-down-big:before { content: '\e81d'; } /* '' */
+.gh-left-open:before { content: '\e81e'; } /* '' */
+.gh-right-open:before { content: '\e81f'; } /* '' */
+.gh-comment:before { content: '\e820'; } /* '' */
+.gh-split:before { content: '\e821'; } /* '' */
+.gh-flow-merge:before { content: '\e822'; } /* '' */
+.gh-flow-cascade:before { content: '\e823'; } /* '' */
+.gh-flow-branch:before { content: '\e824'; } /* '' */
+.gh-flow-tree:before { content: '\e825'; } /* '' */
+.gh-flow-line:before { content: '\e826'; } /* '' */
+.gh-flow-parallel:before { content: '\e827'; } /* '' */
+.gh-flow-split:before { content: '\e828'; } /* '' */
+.gh-flow-parallel-1:before { content: '\e829'; } /* '' */
+.gh-flow-cross:before { content: '\e82a'; } /* '' */
+.gh-comment-1:before { content: '\e82b'; } /* '' */
+.gh-comment-2:before { content: '\e82c'; } /* '' */
+.gh-comment-alt:before { content: '\e82d'; } /* '' */
+.gh-cancel:before { content: '\e82e'; } /* '' */
+.gh-ok:before { content: '\e82f'; } /* '' */
+.gh-cancel-circled:before { content: '\e830'; } /* '' */
+.gh-cancel-circled2:before { content: '\e831'; } /* '' */
+.gh-plus:before { content: '\e832'; } /* '' */
+.gh-minus:before { content: '\e833'; } /* '' */
+.gh-minus-circled:before { content: '\e834'; } /* '' */
+.gh-plus-circled:before { content: '\e835'; } /* '' */
+.gh-ok-circled2:before { content: '\e836'; } /* '' */
+.gh-ok-circled:before { content: '\e837'; } /* '' */
+.gh-th-list:before { content: '\e838'; } /* '' */
+.gh-th:before { content: '\e839'; } /* '' */
+.gh-th-large:before { content: '\e83a'; } /* '' */
+.gh-pin:before { content: '\e83b'; } /* '' */
+.gh-tag:before { content: '\e83c'; } /* '' */
+.gh-tags:before { content: '\e83d'; } /* '' */
+.gh-thumbs-down:before { content: '\e83e'; } /* '' */
+.gh-thumbs-up:before { content: '\e83f'; } /* '' */
+.gh-link:before { content: '\e840'; } /* '' */
+.gh-pencil:before { content: '\e841'; } /* '' */
+.gh-arrows-cw:before { content: '\e842'; } /* '' */
+.gh-ccw:before { content: '\e843'; } /* '' */
+.gh-cw:before { content: '\e844'; } /* '' */
+.gh-shuffle:before { content: '\e845'; } /* '' */
+.gh-flash:before { content: '\e846'; } /* '' */
+.gh-up-1:before { content: '\e847'; } /* '' */
+.gh-down-1:before { content: '\e848'; } /* '' */
+.gh-up-open-big:before { content: '\e849'; } /* '' */
+.gh-down-open-big:before { content: '\e84a'; } /* '' */
+.gh-up-open-mini:before { content: '\e84b'; } /* '' */
+.gh-down-open-mini:before { content: '\e84c'; } /* '' */
+.gh-down-open-1:before { content: '\e84d'; } /* '' */
+.gh-left-open-1:before { content: '\e84e'; } /* '' */
+.gh-right-open-1:before { content: '\e84f'; } /* '' */
+.gh-up-open-1:before { content: '\e850'; } /* '' */
+.gh-down-thin:before { content: '\e851'; } /* '' */
+.gh-left-thin:before { content: '\e852'; } /* '' */
+.gh-right-thin:before { content: '\e853'; } /* '' */
+.gh-up-thin:before { content: '\e854'; } /* '' */
+.gh-arrows-ccw:before { content: '\e855'; } /* '' */
+.gh-level-down-1:before { content: '\e856'; } /* '' */
+.gh-flash-1:before { content: '\e857'; } /* '' */
+.gh-globe:before { content: '\e858'; } /* '' */
+.gh-list:before { content: '\e859'; } /* '' */
+.gh-list-add:before { content: '\e85a'; } /* '' */
+.gh-cog-alt:before { content: '\e85b'; } /* '' */
+.gh-list-1:before { content: '\e85c'; } /* '' */
+.gh-list-nested:before { content: '\e85d'; } /* '' */
+.gh-equalizer:before { content: '\e85e'; } /* '' */
+.gh-heart:before { content: '\e85f'; } /* '' */
+.gh-star:before { content: '\e860'; } /* '' */
+.gh-th-1:before { content: '\e861'; } /* '' */
+.gh-th-list-1:before { content: '\e862'; } /* '' */
+.gh-ok-1:before { content: '\e863'; } /* '' */
+.gh-cancel-1:before { content: '\e864'; } /* '' */
+.gh-cancel-circle:before { content: '\e865'; } /* '' */
+.gh-plus-1:before { content: '\e866'; } /* '' */
+.gh-wrench-1:before { content: '\e867'; } /* '' */
+.gh-github:before { content: '\f09b'; } /* '' */
+.gh-sort:before { content: '\f0dc'; } /* '' */
+.gh-sort-down:before { content: '\f0dd'; } /* '' */
+.gh-sort-up:before { content: '\f0de'; } /* '' */
+.gh-gauge:before { content: '\f0e4'; } /* '' */
+.gh-comment-empty:before { content: '\f0e5'; } /* '' */
+.gh-exchange:before { content: '\f0ec'; } /* '' */
+.gh-download-cloud:before { content: '\f0ed'; } /* '' */
+.gh-upload-cloud:before { content: '\f0ee'; } /* '' */
+.gh-plus-squared:before { content: '\f0fe'; } /* '' */
+.gh-angle-double-left:before { content: '\f100'; } /* '' */
+.gh-angle-double-right:before { content: '\f101'; } /* '' */
+.gh-angle-double-up:before { content: '\f102'; } /* '' */
+.gh-angle-double-down:before { content: '\f103'; } /* '' */
+.gh-angle-left:before { content: '\f104'; } /* '' */
+.gh-angle-right:before { content: '\f105'; } /* '' */
+.gh-angle-up:before { content: '\f106'; } /* '' */
+.gh-angle-down:before { content: '\f107'; } /* '' */
+.gh-github-face:before { content: '\f113'; } /* '' */
+.gh-folder-o:before { content: '\f114'; } /* '' */
+.gh-folder-open-o:before { content: '\f115'; } /* '' */
+.gh-terminal:before { content: '\f120'; } /* '' */
+.gh-code:before { content: '\f121'; } /* '' */
+.gh-fork:before { content: '\f126'; } /* '' */
+.gh-unlink:before { content: '\f127'; } /* '' */
+.gh-help:before { content: '\f128'; } /* '' */
+.gh-info:before { content: '\f129'; } /* '' */
+.gh-minus-squared:before { content: '\f146'; } /* '' */
+.gh-minus-squared-alt:before { content: '\f147'; } /* '' */
+.gh-level-up-1:before { content: '\f148'; } /* '' */
+.gh-level-down:before { content: '\f149'; } /* '' */
+.gh-ok-squared:before { content: '\f14a'; } /* '' */
+.gh-sort-name-up:before { content: '\f15d'; } /* '' */
+.gh-sort-name-down:before { content: '\f15e'; } /* '' */
+.gh-sort-alt-up:before { content: '\f160'; } /* '' */
+.gh-sort-alt-down:before { content: '\f161'; } /* '' */
+.gh-sort-number-up:before { content: '\f162'; } /* '' */
+.gh-sort-number-down:before { content: '\f163'; } /* '' */
+.gh-thumbs-up-alt:before { content: '\f164'; } /* '' */
+.gh-thumbs-down-alt:before { content: '\f165'; } /* '' */
+.gh-bitbucket:before { content: '\f171'; } /* '' */
+.gh-down:before { content: '\f175'; } /* '' */
+.gh-up:before { content: '\f176'; } /* '' */
+.gh-left:before { content: '\f177'; } /* '' */
+.gh-right:before { content: '\f178'; } /* '' */
+.gh-moon:before { content: '\f186'; } /* '' */
+.gh-bug:before { content: '\f188'; } /* '' */
+.gh-right-circled2:before { content: '\f18e'; } /* '' */
+.gh-left-circled2:before { content: '\f190'; } /* '' */
+.gh-plus-squared-alt:before { content: '\f196'; } /* '' */
+.gh-file-code:before { content: '\f1c9'; } /* '' */
+.gh-git-squared:before { content: '\f1d2'; } /* '' */
+.gh-git-text:before { content: '\f1d3'; } /* '' */
+.gh-sliders:before { content: '\f1de'; } /* '' */
+.gh-commenting:before { content: '\f27a'; } /* '' */
+.gh-commenting-o:before { content: '\f27b'; } /* '' */
+.gh-gitlab:before { content: '\f296'; } /* '' */

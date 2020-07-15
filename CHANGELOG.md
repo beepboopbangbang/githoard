@@ -3,58 +3,58 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.3.7"></a>
-## [0.3.7](https://github.com/jojobyte/githoard/compare/v0.3.6...v0.3.7) (2018-04-26)
+## [0.3.7](https://github.com/beepboopbangbang/githoard/compare/v0.3.6...v0.3.7) (2018-04-26)
 
 
 ### Bug Fixes
 
-* **security:** Updates to patch vulnerabilities ([247695e](https://github.com/jojobyte/githoard/commit/247695e))
+* **security:** Updates to patch vulnerabilities ([247695e](https://github.com/beepboopbangbang/githoard/commit/247695e))
 
 
 
 <a name="0.3.6"></a>
-## [0.3.6](https://github.com/jojobyte/githoard/compare/v0.3.5...v0.3.6) (2018-03-31)
+## [0.3.6](https://github.com/beepboopbangbang/githoard/compare/v0.3.5...v0.3.6) (2018-03-31)
 
 
 
 <a name="0.3.5"></a>
-## [0.3.5](https://github.com/jojobyte/githoard/compare/v0.3.4...v0.3.5) (2018-03-31)
+## [0.3.5](https://github.com/beepboopbangbang/githoard/compare/v0.3.4...v0.3.5) (2018-03-31)
 
 
 
 <a name="0.3.4"></a>
-## [0.3.4](https://github.com/jojobyte/githoard/compare/v0.3.3...v0.3.4) (2017-09-30)
+## [0.3.4](https://github.com/beepboopbangbang/githoard/compare/v0.3.3...v0.3.4) (2017-09-30)
 
 
 ### Bug Fixes
 
-* **icon:** Fix linux error and icon issues ([2abd3d7](https://github.com/jojobyte/githoard/commit/2abd3d7)), closes [#1](https://github.com/jojobyte/githoard/issues/1)
+* **icon:** Fix linux error and icon issues ([2abd3d7](https://github.com/beepboopbangbang/githoard/commit/2abd3d7)), closes [#1](https://github.com/beepboopbangbang/githoard/issues/1)
 
 
 
 <a name="0.3.3"></a>
-## [0.3.3](https://github.com/jojobyte/githoard/compare/v0.3.2...v0.3.3) (2017-09-28)
+## [0.3.3](https://github.com/beepboopbangbang/githoard/compare/v0.3.2...v0.3.3) (2017-09-28)
 
 
 ### Bug Fixes
 
-* **package.json:** Update electron for security fix ([6e0cdd9](https://github.com/jojobyte/githoard/commit/6e0cdd9))
-* **update button:** Check for Update now points to releases ([2f2eda9](https://github.com/jojobyte/githoard/commit/2f2eda9))
+* **package.json:** Update electron for security fix ([6e0cdd9](https://github.com/beepboopbangbang/githoard/commit/6e0cdd9))
+* **update button:** Check for Update now points to releases ([2f2eda9](https://github.com/beepboopbangbang/githoard/commit/2f2eda9))
 
 
 
 <a name="0.3.2"></a>
-## [0.3.2](https://github.com/jojobyte/githoard/compare/v0.3.1...v0.3.2) (2017-09-28)
+## [0.3.2](https://github.com/beepboopbangbang/githoard/compare/v0.3.1...v0.3.2) (2017-09-28)
 
 
 
 <a name="0.3.1"></a>
-## [0.3.1](https://github.com/jojobyte/githoard/compare/v0.3.0...v0.3.1) (2017-09-27)
+## [0.3.1](https://github.com/beepboopbangbang/githoard/compare/v0.3.0...v0.3.1) (2017-09-27)
 
 
 ### Bug Fixes
 
-* **events:** Fix eslint error in events ([a8d03c1](https://github.com/jojobyte/githoard/commit/a8d03c1))
+* **events:** Fix eslint error in events ([a8d03c1](https://github.com/beepboopbangbang/githoard/commit/a8d03c1))
 
 
 
