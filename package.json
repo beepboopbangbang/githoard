@@ -2,7 +2,7 @@
   "name": "githoard",
   "displayName": "GitHoard",
   "productName": "GitHoard",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "private": true,
   "description": "Hoard git repositories with ease",
   "repository": "beepboopbangbang/githoard",
