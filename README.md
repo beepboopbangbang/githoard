@@ -11,9 +11,7 @@ Hoard git repositories with ease
 </p>
 
 <p align="center">
-
-[![Build Status](https://travis-ci.org/beepboopbangbang/githoard.svg?branch=master)](https://travis-ci.org/beepboopbangbang/githoard)
-[![Build status](https://ci.appveyor.com/api/projects/status/90296t6a0qeulhb8?svg=true)](https://ci.appveyor.com/project/jojobyte/githoard)
+![Build/release](https://github.com/beepboopbangbang/githoard/workflows/Build/release/badge.svg)
 </p>
 
 ## Overview
