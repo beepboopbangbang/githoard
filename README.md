@@ -11,7 +11,7 @@ Hoard git repositories with ease
 </p>
 
 <p align="center">
- 
+
 ![Build/release](https://github.com/beepboopbangbang/githoard/workflows/Build/release/badge.svg)
 </p>
 
@@ -27,7 +27,17 @@ GitHoard solves this by overriding the HTTP protocols associated with GitHub (gi
 Download the latest version from the [releases](https://github.com/beepboopbangbang/githoard/releases/latest) page.
 
 ## Demo
-![](/screens/demo.gif)
+
+#### Install
+![](/screens/install.gif)
+#### Get Addon
+![](/screens/addon.gif)
+#### See Changes
+![](/screens/changes.gif)
+#### Locate
+![](/screens/locate.gif)
+#### Destroy
+![](/screens/remove.gif)
 
 #### Build Setup
 
@@ -70,4 +80,6 @@ Want to clone stuff even quicker? Check out our Firefox browser addon
 
 Copyright &copy; 2016-present, Beep Boop Bang Bang LLC
 
-GitHoard logo designed by Jordan and makes use of Git Logo by Jason Long which is licensed under the Creative Commons Attribution 3.0 Unported License. See https://git-scm.com/downloads/logos
+GitHoard logo created by Beep Boop Bang Bang LLC.
+Makes use of Git Logo by Jason Long which is licensed under the Creative Commons Attribution 3.0 Unported License.
+See https://git-scm.com/downloads/logos
