@@ -29,7 +29,7 @@
   "dependencies": {
     "@octokit/rest": "^18.0.0",
     "async": "^3.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "byline": "^5.0.0",
     "conf": "^7.0.1",
     "date-fns": "^2.14.0",
