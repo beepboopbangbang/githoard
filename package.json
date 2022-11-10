@@ -70,7 +70,7 @@
     "colors.css": "^3.0.0",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.2.0",
-    "electron": "^8.4.0",
+    "electron": "^18.3.7",
     "electron-builder": "^22.7.0",
     "electron-devtools-installer": "^3.1.0",
     "electron-icon-builder": "^1.0.2",
